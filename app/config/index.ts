@@ -5,6 +5,7 @@ import config from 'config';
  *
  */
 
+
 // App Secret can be retrieved from the App Dashboard
 export const APP_SECRET = (process.env.MESSENGER_APP_SECRET) ?
   process.env.MESSENGER_APP_SECRET :
