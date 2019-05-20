@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import config from 'config';
+import request from 'request';
 
 // App Secret can be retrieved from the App Dashboard
 const APP_SECRET: string = config.get('appSecret');

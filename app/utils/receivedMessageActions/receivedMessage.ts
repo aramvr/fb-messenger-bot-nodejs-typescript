@@ -16,6 +16,8 @@ import {
 } from '../sendMessageActions';
 
 import { SERVER_URL } from '../../config';
+import { MessagingEvent } from '../../routes/webHook';
+
 /*
  * Message Event
  *
@@ -30,7 +32,7 @@ import { SERVER_URL } from '../../config';
  * then we'll simply confirm that we've received the attachment.
  *
  */
-export default function receivedMessage(event: any) {
+export default function receivedMessage(event: MessagingEvent) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
   var timeOfMessage = event.timestamp;

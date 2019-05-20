@@ -1,4 +1,6 @@
-import { sendTextMessage } from '../sendMessageActions'
+import { sendTextMessage } from '../sendMessageActions';
+import { MessagingEvent } from '../../routes/webHook';
+
 /*
  * Authorization Event
  *
@@ -7,7 +9,7 @@ import { sendTextMessage } from '../sendMessageActions'
  * https://developers.facebook.com/docs/messenger-platform/webhook-reference/authentication
  *
  */
-export default function receivedAuthentication(event: any) {
+export default function receivedAuthentication(event: MessagingEvent) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
   var timeOfAuth = event.timestamp;

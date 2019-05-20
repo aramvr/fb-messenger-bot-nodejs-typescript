@@ -1,3 +1,4 @@
+import { MessagingEvent } from '../../routes/webHook';
 
 /*
  * Message Read Event
@@ -6,7 +7,7 @@
  * https://developers.facebook.com/docs/messenger-platform/webhook-reference/message-read
  *
  */
-export default function receivedMessageRead(event: any) {
+export default function receivedMessageRead(event: MessagingEvent) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
 

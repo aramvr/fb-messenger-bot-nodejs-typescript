@@ -1,3 +1,4 @@
+import { MessagingEvent } from '../../routes/webHook';
 
 /*
  * Delivery Confirmation Event
@@ -6,7 +7,7 @@
  * these fields at https://developers.facebook.com/docs/messenger-platform/webhook-reference/message-delivered
  *
  */
-export default function receivedDeliveryConfirmation(event: any) {
+export default function receivedDeliveryConfirmation(event: MessagingEvent) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
   var delivery = event.delivery;
@@ -15,7 +16,7 @@ export default function receivedDeliveryConfirmation(event: any) {
   var sequenceNumber = delivery.seq;
 
   if (messageIDs) {
-    messageIDs.forEach(function (messageID: any) {
+    messageIDs.forEach(function (messageID) {
       console.log("Received delivery confirmation for message ID: %s",
         messageID);
     });

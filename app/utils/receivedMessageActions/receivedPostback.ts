@@ -1,4 +1,5 @@
 import { sendTextMessage } from '../sendMessageActions';
+import { MessagingEvent } from '../../routes/webHook';
 
 /*
  * Postback Event
@@ -7,7 +8,7 @@ import { sendTextMessage } from '../sendMessageActions';
  * https://developers.facebook.com/docs/messenger-platform/webhook-reference/postback-received
  *
  */
-export default function receivedPostback(event: any) {
+export default function receivedPostback(event: MessagingEvent) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
   var timeOfPostback = event.timestamp;
