@@ -89,3 +89,6 @@ typings/
 
 # config files
 config/*.json
+
+# build folder 
+build/*
