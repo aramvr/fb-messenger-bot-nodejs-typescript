@@ -1,6 +1,6 @@
-# Messenger Platform Sample -- node.js
+# Messenger Bot Boilerplate -- node.js and typescript
 
-This project is an example server for Messenger Platform built in Node.js. With this app, you can send it messages and it will echo them back to you. You can also see examples of the different types of Structured Messages. 
+This project is an good structured boilerplate server for Messenger Platform built in Node.js. With this app, you can send it messages and it will echo them back to you. You can also see examples of the different types of Structured Messages. 
 
 It contains the following functionality:
 
@@ -13,8 +13,17 @@ Follow the [walk-through](https://developers.facebook.com/docs/messenger-platfor
 
 ## Setup
 
-Set the values in `config/default.json` before running the sample. Descriptions of each parameter can be found in `app.js`. Alternatively, you can set the corresponding environment variables as defined in `app.js`.
+Set the values in `config/default.json` before running the sample. 
 
+```
+{
+  "appSecret": "",
+  "pageAccessToken": "",
+  "validationToken": "",
+  "serverURL": ""
+}
+
+```
 Replace values for `APP_ID` and `PAGE_ID` in `public/index.html`.
 
 ## Run
